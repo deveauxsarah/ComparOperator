@@ -1,0 +1,154 @@
+#body{
+    background-color: rgb(255, 255, 255);
+    height: 200vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo4{
+    margin-top: 10vw;
+    margin-left: 31vw;
+}
+
+#logo3{
+    margin-top: 10vw;
+    margin-left: 10vw;
+}
+
+#navbar,#chooseDestination{
+    background-color: rgb(255, 255, 255);
+    height: 10vw;
+}
+
+#returnHome{
+    margin-left: -40%;
+    margin-left:70%;
+}
+.table{
+    margin-right:-25%;
+}
+
+.TOResult{
+    margin-left:-60%;
+    margin-right:-60%;
+    border: thick double #32a1ce;
+}
+ .NoteImageRevue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#inputComment{
+    border-color: black;
+}
+
+#inputComment:hover{
+    background-image: linear-gradient(to right, #2b99e7, rgba(255, 255, 255, 0), #ffffff00, #2b99e7);
+	box-shadow: 0 5px 18px 0 rgb(255, 255, 255);
+ color: rgb(39, 42, 44);
+}
+.LocImg{
+    margin-top: 30%;
+    margin-right: 20%;
+    margin-left: -40%;
+}
+
+.imgLocation{
+    margin-left: -30%;
+    width: 45%;
+}  
+
+.TOtoDest{
+    margin-left: 25%;
+    width: 45%;
+    height: 50%;
+} 
+
+.revue{
+    margin-top: 6%;
+    position:relative;
+    width: 60%;
+    height: auto;
+}
+
+.allTO{
+    width: 100%;
+    border: 1px rgb(35, 166, 223) solid;
+    display: flex;
+    flex-direction: row;
+    height:auto;
+}
+
+.TO{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.price{
+    margin-right: -70px;
+    width: 33%;
+}
+
+.TONotes{ 
+    margin-right: 90px;
+    display: flex;
+    flex-direction: row;
+}
+
+.TONotes{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+
+} 
+ .notesStars{
+     width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+} 
+ .star{
+    margin-top: 2%;
+}
+
+.stars{
+    width :15%;
+    display: flex;
+    flex-direction: row;
+
+}
+ .comments{
+    margin-bottom: 10px;
+} 
+ .author{
+    margin-left: 15px;
+    margin-right: 5px;
+} 
+
+ .commentary{
+    display: flex;
+    flex-direction: row;
+} 
+.note{
+    margin-left: 70%;
+}
+
+ .revue{
+    border: thick double #32a1ce;
+
+}  
+
+footer{
+    background-position: center;
+}
+  #butTop{
+    overflow: hidden;
+    bottom:  0;
+    right: 0;
+    justify-content:end;
+    margin-block: 10px;
+    position: fixed;
+}

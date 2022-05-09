@@ -1,0 +1,448 @@
+#body{
+    background-color: rgb(255, 255, 255);
+    height: 200vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo3{
+    margin-top: 15vw;
+    margin-left: 10vw;
+
+}
+#logo4{
+    margin-top: 30vw;
+    margin-left: 31vw;
+}
+#navbar,#chooseDestination{
+    height: 3vw;
+}
+select{
+    border: thick double #32a1ce;
+    background-color:white;
+    box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
+}
+#chooseDestination{
+    margin-top: 0vw;
+    margin-left: 68vw;
+}
+
+#btnNav{
+    border: thick double #32a1ce;
+}
+
+#btnNav:hover{
+	background-image: linear-gradient(to right, #2b99e7, rgba(255, 255, 255, 0), #ffffff00, #2b99e7);
+	box-shadow: 0 5px 18px 0 rgb(255, 255, 255);
+ color: rgb(39, 42, 44);
+}
+
+
+#sliderSettings{
+    background-size: cover;
+    background-position: center;
+}
+.pSlider:after, :before{
+    box-sizing: border-box;
+}
+.pSlider:before {
+    box-sizing: border-box;
+}
+
+
+
+/* slides images */
+#slider{
+    background-size: cover;
+}
+#slide_1 {
+        background-size: cover;
+    background-image: url(https://www.voyageur-independant.com/wp-content/uploads/quel-city-pass-pour-rome.jpg);
+}
+#slide_2 {
+    background-size: cover;
+    background-image: url(https://cdn2.civitatis.com/reino-unido/londres/guia/camden-town.jpg);
+}
+#slide_3 {
+    background-size: cover;
+    background-image: url(https://img.ev.mu/images/portfolio/villes/40699/1605x1070/297766.jpg);
+}
+#slide_4 {
+    background-size: cover;
+    background-image: url(https://www.voyage-tunisie.info/wp-content/uploads/2017/11/tunis3.jpg);
+}
+#slide_5{
+    background-size: cover;
+    background-image: url(https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/1/6/116656/l-incroyable-conquete-mars.jpg?alias=original);
+}
+.li_slide {
+    background-size: cover;
+    background-position: center;
+}
+
+/* carousel */
+
+.pSlider:after, :before{
+    box-sizing: border-box;
+}
+.pSlider:before {
+    box-sizing: border-box;
+}
+
+.li_slide {
+    background-size: cover;
+    background-position: center;
+}
+/* Animations */
+@keyframes tonext {
+    75% {
+        margin-left: 0;
+    }
+    95% {
+        margin-left: calc(100% + 150px);
+    }
+    98% {
+        margin-left: calc(100% + 150px);
+    }
+    99% {
+        margin-left: 0;
+    }
+}
+@keyframes snap {
+    96% {
+        scroll-snap-align: start;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: start;
+    }
+}
+@keyframes tostart {
+    75% {
+        margin-left: 0;
+    }
+    95% {
+        margin-left: calc(-300% - 450px);
+    }
+    98% {
+        margin-left: calc(-300% - 450px);
+    }
+    99% {
+        margin-left: 0;
+    }
+}
+/* Reset */
+
+#pSlider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top:190px;
+}
+#pSlider #slider-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+#pSlider #slider-container .li_slide {
+    position: relative;
+    width: 100%;
+    flex: none;
+    margin-right: 150px;
+}
+
+#pSlider #slider-container .li_slide:last-child {
+    margin-right: 0;
+}
+#pSlider #slider-container .li_slide .slide-snapper {
+    /* Auto play */
+    scroll-snap-align: start;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: tonext 4s infinite ease, snap 4s infinite ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    #pSlider #slider-container .li_slide .slide-snapper {
+        animation-name: none;
+    }
+}
+#pSlider #slider-container .li_slide:last-child .slide-snapper {
+    animation-name: tostart, snap;
+}
+#pSlider #slider-container:hover .li_slide .slide-snapper, #pSlider #slider-container:focus-within .li_slide .slide-snapper {
+    animation-name: none;
+}
+#pSlider:before, #pSlider:after, #pSlider .prev_slide, #pSlider .next_slide {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+#pSlider:before, #pSlider:after {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+#pSlider .next_slide {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+}
+#pSlider .prev_slide {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+}
+#pSlider:before, #pSlider .prev_slide {
+    content: "";
+    left: 0px;
+}
+#pSlider:after, #pSlider .next_slide {
+    content: "";
+    right: 0px;
+}
+#pSlider:after {
+    z-index: 1;
+    /* set underneath .next_slide (z: 2)*/
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='10 10 30 30 10 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&lt;%3C/polyline%3E%3C/svg%3E");
+}
+#pSlider:before {
+    z-index: 2;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='30 10 10 30 30 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&gt;%3C/polyline%3E%3C/svg%3E");
+}
+/* Scrollbar */
+#pSlider #slider-container::-webkit-scrollbar {
+    display: none;
+    height: 5px;
+}
+#pSlider #slider-container::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 50px;
+}
+#pSlider #slider-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Input */
+
+#sliderSettings {
+    text-align: center;
+}
+
+#slider-width, #slider-height {
+  text-align: center;
+}
+
+  .box-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 15px;
+    width: 100%;
+  }
+  
+  @media screen and (min-width:1200px) {
+    .box-container {
+      flex-direction: row
+    }
+  }
+  
+  .box-item {
+    position: relative;
+    width: 415px;
+    margin-bottom: 35px;
+    max-width: 100%;
+  }
+  #h3{
+      margin-top: -200px;
+  }
+  .flip-box {
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+  }
+  
+  .flip-box-front,
+  .flip-box-back {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 475px;
+    -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-front {
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-back {
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box .inner {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 60px;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    z-index: 2;
+    
+    transform: translateY(-50%) translateZ(60px) scale(.94);
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+    -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
+    top: 50%;
+  }
+  
+  .flip-box-header {
+    font-size: 34px;
+  }
+  
+  .flip-box p {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  
+  .flip-box-img {
+    margin-top: 25px;
+  }
+  
+  .flip-box-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+  }
+
+  .grid {
+     padding-top: 40px;
+     padding-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 50px;
+    align-items: stretch;
+    margin-bottom: 30%;
+
+  }
+  
+  .grid > article {
+      height: 250px;
+    box-shadow: 2px 2px 6px 0px rgba(22, 145, 197);
+    
+  }
+  
+  .grid > article img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit:cover;
+    transition: all 1s;
+  }
+
+  .grid > article:hover img{
+    transform:scale(1.2);  
+  }
+  .grid > article:hover .text{
+    transform:scale(1.2);  
+  }
+  
+  .grid .text {
+      padding-top: 10px;
+    text-align: center;
+    transition: all 1s;
+    text-decoration: none;
+    color: black;
+
+  }
+    .grid .text {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+        
+  }
+
+  .imgBox{
+      height: 80%;
+    overflow: hidden;
+
+  }
+  
+
+  footer{
+      height: -8vw;
+      background-position: center;
+      background-color:rgba(22, 145, 197);
+  }
+  
+  #butTop{
+    overflow: hidden;
+    bottom:  0;
+    right: 0;
+    justify-content:end;
+    position: fixed;
+}
+
+
+

@@ -25,7 +25,7 @@ include './config/autoload.php';
     $info = $classe->getDestinationNames();
     ?>
     <nav id="navbar" class="flex flex-row items-center ">
-        <img id="logo3" src="./images/logo3.png" class=" ">
+        <img id="logo3" src="./images/logo3.PNG" class=" ">
         <img id="logo4" src="./images/logo4.png">
     </nav>
     <section id="chooseDestination" class="text-center ">

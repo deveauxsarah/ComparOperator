@@ -32,7 +32,7 @@ include './config/autoload.php';
                     <select id="select" name="dest" size="1" class="rounded flex flex-row text-gray-700 text-2xl italic ">
                         <?php foreach ($info as $key => $value) { ?>
                             <option href=<?= $value ?>><?= $value ?> </option> <?php
-                                                                        } ?>
+                                                                            } ?>
                     </select><br>
                     <button type="submit" id="btnNav" class="text-gray-700 rounded bg-white text-xl italic">Valider</button>
                 </form>
@@ -223,7 +223,7 @@ include './config/autoload.php';
         <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div>
     </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="/JS/main.js"></script>
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>

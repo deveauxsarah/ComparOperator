@@ -2,6 +2,9 @@
 include "./config/bdd.php";
 include './config/autoload.php';
 
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +25,7 @@ include './config/autoload.php';
     $info = $classe->getDestinationNames();
     ?>
     <nav id="navbar" class="flex flex-row items-center ">
-        <img id="logo3" src="./images/logo3.png" class=" ">
+        <img id="logo3" src="./images/logo3.PNG" class=" ">
         <img id="logo4" src="./images/logo4.png">
     </nav>
     <section id="chooseDestination" class="text-center ">
@@ -32,7 +35,7 @@ include './config/autoload.php';
                     <select id="select" name="dest" size="1" class="rounded flex flex-row text-gray-700 text-2xl italic ">
                         <?php foreach ($info as $key => $value) { ?>
                             <option href=<?= $value ?>><?= $value ?> </option> <?php
-                                                                        } ?>
+                                                                            } ?>
                     </select><br>
                     <button type="submit" id="btnNav" class="text-gray-700 rounded bg-white text-xl italic">Valider</button>
                 </form>
@@ -171,7 +174,7 @@ include './config/autoload.php';
         </section>
         <section id="messageselection" class="">
             <p class="text-3xl h-8 text-center italic bg-white text-gray-700">
-                Succombez à nos destinations pour vos prochaines vaccances ...
+                Succombez à nos destinations pour vos prochaines vacances ...
             </p>
         </section>
         <section>
@@ -223,7 +226,7 @@ include './config/autoload.php';
         <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div>
     </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="/JS/main.js"></script>
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 <?php
 
-class DataBase{
-    private $db_name;  
+class DataBase
+{
+    private $db_name;
     private $db_user;
     private $db_password;
     private $db_host;
@@ -13,37 +14,34 @@ class DataBase{
         $this->db_user = $db_user;
         $this->db_password = $db_password;
         $this->db_host = $db_host;
-
     }
 
-    public function getPDO(){
-        if($this->db === null){
-            $db = new PDO(
-                'mysql:host=localhost;dbname=comparoperator;charset=utf8', // serveur;base de donnée; encodage de caractère
-                'root', // mon compte à moi pour me connecter au serveur
-                '' // mon mot de passe pour me connecter au serveur
-            );
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    public function getPDO()
+    {
+        if ($this->db === null) {
+            require(__DIR__ . '/../config/bdd.php');
             $this->db = $db;
         }
         return $this->db;
     }
 
-    public function query($statement){
+    public function query($statement)
+    {
         $request = $this->getPDO()->query($statement);
         $datas = $request->fetchAll();
         return $datas;
     }
 
-    public function prepare($statement, $values, $one=false){
+    public function prepare($statement, $values, $one = false)
+    {
         $req = $this->getPDO()->prepare($statement);
         $req->execute($values);
-        if($one){
+        if ($one) {
             $datas = $req->fetch();
-        }else{
+        } else {
             $datas = $req->fetchAll();
         }
-        
+
         return $datas;
     }
- }
+}

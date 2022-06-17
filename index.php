@@ -174,7 +174,7 @@ include './config/autoload.php';
         </section>
         <section id="messageselection" class="">
             <p class="text-3xl h-8 text-center italic bg-white text-gray-700">
-                Succombez à nos destinations pour vos prochaines vaccances ...
+                Succombez à nos destinations pour vos prochaines vacances ...
             </p>
         </section>
         <section>
